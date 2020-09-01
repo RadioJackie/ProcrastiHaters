@@ -7,29 +7,29 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-function Books() {
+function Quotes() {
   // Setting our component's initial state
-  const [books, setBooks] = useState([])
+  const [quotes, setQuotes] = useState([])
   const [formObject, setFormObject] = useState({})
 
   // Load all books and store them with setBooks
   useEffect(() => {
-    loadBooks()
+    loadQuotes()
   }, [])
 
   // Loads all books and sets them to books
-  function loadBooks() {
-    API.getBooks()
+  function loadQuotes() {
+    API.getQuotes()
       .then(res =>
-        setBooks(res.data)
+        setQuotes(res.data)
       )
       .catch(err => console.log(err));
   };
 
   // Deletes a book from the database with a given id, then reloads books from the db
-  function deleteBook(id) {
-    API.deleteBook(id)
-      .then(res => loadBooks())
+  function deleteQuotes(id) {
+    API.deleteQuotes(id)
+      .then(res => loadQuotes())
       .catch(err => console.log(err));
   }
 
@@ -44,7 +44,7 @@ function Books() {
   function handleFormSubmit(event) {
     event.preventDefault();
     if (formObject.title && formObject.author) {
-      API.saveBook({
+      API.saveQupote({
         title: formObject.title,
         author: formObject.author,
         synopsis: formObject.synopsis
@@ -59,17 +59,17 @@ function Books() {
       <Row>
         <Col size="md-6">
           <Jumbotron>
-            <h1>What Books Should I Read?</h1>
+            <h1>What's my motivation for today?</h1>
           </Jumbotron>
           <form>
             <Input
               onChange={handleInputChange}
-              name="title"
-              placeholder="Title (required)"
+              name="Motivation or Inspiration"
+              placeholder="Motivation or Inspiration (required)"
             />
             <Input
               onChange={handleInputChange}
-              name="author"
+              name="Type of day "
               placeholder="Author (required)"
             />
             <TextArea
