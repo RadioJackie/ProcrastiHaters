@@ -10,21 +10,21 @@ import {
 const items = [
   {
     id: 1,
-    src: "https://picsum.photos/1500/300",
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    src: "https://picsum.photos/1500/600",
+      //  
+      caption: 'LIfe is Passing you by'
   },
-  {
+  { 
     id: 2,
-    src: "https://picsum.photos/1000/200",
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: "https://picsum.photos/1500/599",
+    // altText: 'Slide 2',
+    caption: 'Stop Wasting Time doing Nothing'
   },
   {
     id: 3,
-    src: "https://picsum.photos/200/300",
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    src: "https://picsum.photos/1500/601",
+    altText: '',
+    caption: 'You are better than this!'
   }
 ];
 

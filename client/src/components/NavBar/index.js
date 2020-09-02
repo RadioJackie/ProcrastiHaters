@@ -13,6 +13,7 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+// import Timer from '../Timer/timer'
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ const Example = (props) => {
               <NavLink href="/components/">Quotes</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Journal</NavLink>
+              <NavLink href="#">Journal</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -50,7 +51,7 @@ const Example = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>Work Harder on Moving Forward</NavbarText>
         </Collapse>
       </Navbar>
     </div>
