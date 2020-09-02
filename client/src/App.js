@@ -5,13 +5,16 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Carousel from "./components/carousel";
+import NavBar from "./components/NavBar"
+// import Navbar from "./components/NavBar";
 
 function App() {
   return (
     <Router>
       <div>
       <Carousel />
-        <Nav />
+      <NavBar />
+        {/* <Nav /> */}
         <Switch>
           {/* <Route exact path={["/", "/quotes"]}>
             <Quotes />
