@@ -6,6 +6,7 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Carousel from "./components/carousel";
 import NavBar from "./components/NavBar"
+import MyCalendar from "./components/Calendar"
 // import Navbar from "./components/NavBar";
 
 
@@ -28,8 +29,28 @@ function App() {
           </Route> */}
         </Switch>
       </div>
+      <div>
+      <MyCalendar />
+      <div className="App">
+        <header className="App-header">
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+        </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+        </a>
+        </header>
+      </div>
+    </div>
     </Router>
   );
 }
+
 
 export default App;
