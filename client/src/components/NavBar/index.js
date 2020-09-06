@@ -13,6 +13,7 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+
 // import Timer from '../Timer/timer'
 
 const Example = (props) => {
@@ -22,14 +23,14 @@ const Example = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+            <Navbar color="light" light expand="md">
         <NavbarBrand href="/">ProcrastiHaters</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Quotes</NavLink>
-            </NavItem>
+            {/* <NavItem>
+              <NavLink href="/pages/quotes">Quotes</NavLink>
+            </NavItem> */}
             <NavItem>
               <NavLink href="#">Journal</NavLink>
             </NavItem>
