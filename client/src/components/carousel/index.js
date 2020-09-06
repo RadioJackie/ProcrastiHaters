@@ -10,19 +10,19 @@ import {
 const items = [
   {
     id: 1,
-    src: "https://picsum.photos/1500/600",
+    src: "https://picsum.photos/2000/600",
       //  
       caption: 'LIfe is Passing you by'
   },
   { 
     id: 2,
-    src: "https://picsum.photos/1500/599",
+    src: "https://picsum.photos/2000/600",
     // altText: 'Slide 2',
     caption: 'Stop Wasting Time doing Nothing'
   },
   {
     id: 3,
-    src: "https://picsum.photos/1500/601",
+    src: "https://picsum.photos/2000/601",
     altText: '',
     caption: 'You are better than this!'
   }
