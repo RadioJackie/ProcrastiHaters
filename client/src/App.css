@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Pacifico&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #222222;
+}
+
+header {
+    height: 50px;
+    display: -webkit-inline-flex;
+    align-items: center;
+    background: #2d3436;
+    text-align: center;
+    background: -webkit-linear-gradient(to right, #00cec9, #a29bfe);
+    background: linear-gradient(to right, #0984e3, #a29bfe);
+}
+
+header > img {
+    height: 30%;
+    margin-left: 10%;
+}
+
+header >h1 {
+    font-family: VT323, monospace;
+    color: whitesmoke;
+    font-size: 50px;
+    margin-left: 60px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.thumbnail > img {
+    filter: brightness(90%);
+    display: block;
+    width: 100%;
+    filter: blur(20px)
+}
+
+.thumbnail {
+  
+    position: relative;
+    width: auto;
+    margin: auto;
+}
+
+.caption {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+    
+    font-size: 17px;
+    /* 100 = viewport width, as 1vw = 1/100th of that
+       So if the container is 50% of viewport (as here)
+       then factor that into how you want it to size.
+       Let's say you like 5vw if it were the whole width,
+       then for this container, size it at 2.5vw (5 * .5 [i.e. 50%])
+    */
+    font-size: 34px;
+    font-weight: bold;
+}
+.caption > .au {
+  font-family: 'Pacifico', cursive;
+  text-transform: capitalize;
+  color: whitesmoke;
+  opacity:1.1;
+  border-bottom: 5px solid #f1c40f;
+filter:alpha(opacity=40);
+text-shadow:-.1em .15em .15em black;
+
+}
+.caption > .qu {
+text-transform: uppercase;
+color: white; 
+text-shadow:-.1em .15em .15em black;
+}
+
+.bt {
+    border: none;
+    font-family: VT323, monospace;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    color: white;
+    text-transform: uppercase;
+    background: #6441A5;
+    align-items: center;
+}
+
+.downloads {
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px
+
+}
+.download {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  -webkit-min-device-pixel-ratio: 2
+}
+
+.banner {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  border-radius: 20px;
+}
+.banner h1 {
+  font-size: 2p;
+}
+.banner div {
+  width: 10rem;
+  height: 5px;
+  background: yellow;
+  margin: 1.7rem auto;
+}
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: px) {
+  .banner {
+    padding: 2rem 3rem;
+  }
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 40px) {
+  .banner {
+    padding: 100px
+  }
+  .banner h1 {
+    font-size: 40px;
+  }
+}
+#btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: vaBlack;
+  background: yellow;
+  padding: 0.4rem 0.9rem;
+  border: 3px solid yellow;
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.error{
+    display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 66px);
+}
+.welcome{
+  text-align: center;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 5px;
+    font-size: 1vw;
+}
+.rano{
+   padding: 20px 20px;
+}

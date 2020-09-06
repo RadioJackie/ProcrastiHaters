@@ -8,6 +8,9 @@ import Carousel from "./components/carousel";
 import NavBar from "./components/NavBar"
 import MyCalendar from "./components/Calendar"
 // import Navbar from "./components/NavBar";
+import Qdata from "./Qdata"
+import Error from './Error'
+import './App.css'
 
 
 function App() {
@@ -15,25 +18,20 @@ function App() {
     <Router>
       <div>
       <Carousel />
+      <div>
       <NavBar />
+      </div>
         <Nav />
         <Switch>
-          {/* <Route exact path={["/", "/quotes"]}>
-            <Quotes />
-          </Route>
-          <Route exact path="/quotes/:id">
-            <Detail />
-          </Route>
-          <Route> */}
-            {/* <NoMatch />
-          </Route> */}
+        <div> 
+        <Route path="/" component={Qdata} />      
+                  </div> 
         </Switch>
-      </div>
-      <div>
-      <MyCalendar />
-      <div className="App">
+{/*            
+             
+           <div className="App">
         <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -46,11 +44,11 @@ function App() {
             Learn React
         </a>
         </header>
-      </div>
+      </div> */}
     </div>
     </Router>
   );
-}
+  }
 
 
 export default App;
