@@ -12,7 +12,8 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText
-} from 'reactstrap';
+} from 'reactstrap';  
+
 
 // import Timer from '../Timer/timer'
 
@@ -28,9 +29,9 @@ const Example = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            {/* <NavItem>
-              <NavLink href="/pages/quotes">Quotes</NavLink>
-            </NavItem> */}
+            <NavItem>
+              <NavLink href="./pages/quotes">Quotes</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="#">Journal</NavLink>
             </NavItem>
@@ -43,7 +44,7 @@ const Example = (props) => {
                   Option 1
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
+                 Option 2 
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
