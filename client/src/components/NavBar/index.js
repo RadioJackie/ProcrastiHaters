@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Login from '../../pages/Login';
 import {
   Collapse,
   Navbar,
@@ -41,14 +43,18 @@ const Example = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                <NavLink href="../../pages/Login">Login</NavLink><Route
+                    path="/login"
+                    component={Login}
+                    exact
+                />
                 </DropdownItem>
                 <DropdownItem>
-                 Option 2 
+                <NavLink href="#">Logout</NavLink>
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                  Reset
+                <NavLink href="../pages/Register">Sign Up</NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
