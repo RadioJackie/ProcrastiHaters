@@ -16301,6 +16301,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
+          <h1> Hello </h1>
             <h6 className="QuoteID">#{QuotesData[this.state.quoteNum].ID}</h6>
         </header>
         <main>
