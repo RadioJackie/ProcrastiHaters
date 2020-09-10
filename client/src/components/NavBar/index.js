@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import {Link} from 'react-router-dom';
+
 import {
   Collapse,
   Navbar,
@@ -41,7 +43,7 @@ const Example = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                <NavLink href="./pages/Register">Register</NavLink>  
                 </DropdownItem>
                 <DropdownItem>
                  Option 2 

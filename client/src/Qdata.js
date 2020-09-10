@@ -1,5 +1,5 @@
 import React,{Component}  from 'react'
-import Data from './pages/quotes.js'
+import Data from './pages/Quote'
 import * as domtoimagemore from 'dom-to-image-more'
 import { saveAs } from 'file-saver'
 class Qdata extends Component{

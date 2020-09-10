@@ -23,9 +23,9 @@ function App() {
       </div>
         <Nav />
         <Switch>
-        <div> 
+        {/* <div> 
         <Route path="/" component={Qdata} />      
-                  </div> 
+                  </div>  */}
         </Switch>
 {/*            
              

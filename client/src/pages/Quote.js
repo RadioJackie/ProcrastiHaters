@@ -1,9 +1,9 @@
 
 import React from 'react';
-import Quotes from './quotes.js'
+// import Quotes from './quotes.js'
 // import NextQuote from './nextQuote.js'
 import '../App.css';
-import QuotesData from "./quotes.js"
+// import Data from "./Quotes.js"
 
 const Data = [{
   "quoteText": "Genius is one percent inspiration and ninety-nine percent perspiration.",
@@ -16279,16 +16279,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quoteNum: Math.floor(Math.random()*QuotesData.length)
+      quoteNum: Math.floor(Math.random()*Data.length)
     }
   }
 
   changeCallback = () => {
 
-    let value = Math.floor(Math.random()*QuotesData.length);
+    let value = Math.floor(Math.random()*Data.length);
 
     if (value === this.state.quoteNum) {
-      value = Math.floor(Math.random()*QuotesData.length);
+      value = Math.floor(Math.random()*Data.length);
     } else {
       this.setState({
         quoteNum: value
@@ -16301,10 +16301,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-            <h6 className="QuoteID">#{QuotesData[this.state.quoteNum].ID}</h6>
+          <h1> Hello </h1>
+            <h6 className="QuoteID">#{Data[this.state.quoteNum].ID}</h6>
         </header>
         <main>
-          <Quotes quote={QuotesData[this.state.quoteNum].quote}/>
+          {/* <Quotes quote={Data[this.state.quoteNum].quote}/> */}
           <nextQuotes changeCallback={this.changeCallback}/>
         </main>
         
