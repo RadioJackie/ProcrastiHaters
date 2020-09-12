@@ -71,7 +71,7 @@ const Example = (props) => {
         {
           `.custom-tag {
               max-width: 100%;
-              height: 500px;
+              height: 250px;
               background: black;
             }`
         }
