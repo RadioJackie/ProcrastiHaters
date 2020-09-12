@@ -35,7 +35,7 @@ const Example = (props) => {
               <NavLink tag={Link} to="/Quote">Quotes</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">Journal</NavLink>
+              <NavLink tag={Link} to="/Note">Journal</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -43,15 +43,15 @@ const Example = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                <NavLink href="./pages/Register">Register</NavLink>  
+                <NavLink tag={Link} to="/Login">Login</NavLink>  
                 </DropdownItem>
                 <DropdownItem>
-                 Option 2 
+                <NavLink tag={Link} to="/Signup">SignUp</NavLink>
                 </DropdownItem>
-                <DropdownItem divider />
+                {/* <DropdownItem divider />
                 <DropdownItem>
                   Reset
-                </DropdownItem>
+                </DropdownItem> */}
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
