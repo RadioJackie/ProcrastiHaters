@@ -103,19 +103,19 @@ function Entry({addEntry}) {
           value="danger" defaultChecked={flag === 'danger'} 
           onChange={handleFlagChange}/> 
         <label className="form-check-label bg-danger text-white mr-2 pl-2 pr-2" 
-          htmlFor="flagDanger">Critical</label>
+          htmlFor="flagDanger">Awesome Day</label>
         <input className="form-check-input" 
           id="flagGreen" type="radio" name="flag" 
           value="success" defaultChecked={flag === 'success'} 
           onChange={handleFlagChange}/>
         <label className="form-check-label bg-success text-white mr-2 pl-2 pr-2" 
-          htmlFor="flagGreen">Normal</label>
+          htmlFor="flagGreen">Regular Day</label>
         <input className="form-check-input" 
           id="flagInfo" type="radio" name="flag" 
           value="dark" defaultChecked={flag === 'dark'} 
           onChange={handleFlagChange}/>
         <label className="form-check-label bg-dark text-white pl-2 pr-2" 
-          htmlFor="flagInfo">Info</label>
+          htmlFor="flagInfo">Bad Day</label>
       </div>
       <button disabled={message.trim().length === 0 || !flag} 
         className="btn btn-success form-control" 
