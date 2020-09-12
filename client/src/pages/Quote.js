@@ -16314,6 +16314,18 @@ const Data = [{
 //   }
 // }
 function Quote() {
+  const mystyle = {
+    display: "flex",
+    color: "white",
+    backgroundColor: "MidnightBlue",
+    padding: "10px",
+    font: "45px",
+    fontFamily: "Arial",
+    justifyContent: "center",
+    alignItems: "center"
+    
+  };
+ 
   const [index, setIndex] = useState(null);
 
   useEffect(() => {
@@ -16322,8 +16334,8 @@ function Quote() {
   }, [])
   if (index !== null) {
     return (<>
-      <div style={{color: 'white'}}>{Data[index].quoteText}</div>
-      <div style={{color: 'white'}}>{Data[index].quoteAuthor}</div>
+      <div style={mystyle}>{Data[index].quoteText}</div>
+      <div style={mystyle}>{Data[index].quoteAuthor}</div>
       </>)
   }
   return '';
