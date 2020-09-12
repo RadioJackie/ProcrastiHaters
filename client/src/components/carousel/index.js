@@ -16,7 +16,7 @@ const items = [
   },
   { 
     id: 2,
-    src: "https://picsum.photos/2000/600",
+    src: "https://picsum.photos/2000/",
     // altText: 'Slide 2',
     caption: 'Stop Wasting Time Doing Nothing'
   },
