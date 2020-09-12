@@ -35,7 +35,7 @@ const Example = (props) => {
               <NavLink tag={Link} to="/Quote">Quotes</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/Note">Journal</NavLink>
+              <NavLink tag={Link} to="/useJournal">Journal</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
