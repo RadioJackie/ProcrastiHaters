@@ -1,47 +1,73 @@
 import React, { Component } from 'react';
-import { DatePicker, RangePicker, theme } from 'react-trip-date';
-import {ThemeProvider} from 'styled-components';
-const  handleResponsive  =  setNumberOfMonth  =>  {
-	let  width  =  document.querySelector('.tp-calendar').clientWidth;
-	if  (width  >  900)  {
-		setNumberOfMonth(3);
-	}  else  if  (width  <  900  &&  width  >  580)  {
-		setNumberOfMonth(2);
-	}  else  if  (width  <  580)  {
-		setNumberOfMonth(1);
-	}
-};
+import Scheduler from './components/Scheduler';
+import Toolbar from './components/Toolbar';
+import MessageArea from './components/MessageArea';
+import './App.css';
 
-const  Day = ({  day  }) => {
-	return  (
-		<>
-			<p  className="date">{day.format('DD')}</p>
-			<p  className="date">7</p>
-		</>
-		);
+const data = [
+	{ start_date: '2020-06-10 6:00', end_date: '2020-06-10 8:00', text: 'Event 1', id: 1 },
+	{ start_date: '2020-06-13 10:00', end_date: '2020-06-13 18:00', text: 'Event 2', id: 2 }
+];
+
+class App extends Component {
+	state = {
+		currentTimeFormatState: true,
+		messages: []
 	};
-	
-class MyApp extends Component {
 
-  onChange = date => console.log(date)
+	addMessage(message) {
+		const maxLogLength = 5;
+		const newMessage = { message };
+		const messages = [
+			newMessage,
+			...this.state.messages
+		];
 
-  render() {
-    return (
-      <ThemeProvider theme={theme}>
-        <DatePicker
-          handleChange={onChange}
-		  selectedDays={['2019-11-06']} //initial selected days
-		  jalali={false}
-		  numberOfMonths={3}
-		  numberOfSelectableDays={3} // number of days you need 
-		  disabledDays={['2019-12-02']} //disabeld days
-		  responsive={handleResponsive} // custom responsive, when using it, `numberOfMonths` props not working
-		  disabledBeforToday={true} 
-		  disabled={false} // disable calendar 
-		  dayComponent={Day} //custom day component 
-		  titleComponent={Title} // custom title of days
-        />
-      </ThemeProvider>
-    );
-  }
+		if (messages.length > maxLogLength) {
+			messages.length = maxLogLength;
+		}
+		this.setState({ messages });
+	}
+
+	logDataUpdate = (action, ev, id) => {
+		const text = ev && ev.text ? ` (${ev.text})` : '';
+		const message = `event ${action}: ${id} ${text}`;
+		this.addMessage(message);
+	}
+
+	handleTimeFormatStateChange = (state) => {
+		this.setState({
+			currentTimeFormatState: state
+		});
+	}
+
+	render() {
+		const { currentTimeFormatState, messages } = this.state;
+		return (
+			<div>
+				<div className="tool-bar">
+					<Toolbar
+						timeFormatState={currentTimeFormatState}
+						onTimeFormatStateChange={this.handleTimeFormatStateChange}
+					/>
+				</div>
+				<div className='scheduler-container'>
+					<Scheduler
+						events={data}
+						timeFormatState={currentTimeFormatState}
+						onDataUpdated={this.logDataUpdate}
+					/>
+				</div>
+				<MessageArea
+					messages={messages}
+				/>
+			</div>
+		);
+	}
 }
+export default App;
+
+
+
+// 
+
