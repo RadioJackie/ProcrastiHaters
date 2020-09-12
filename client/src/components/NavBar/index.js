@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import {Link} from 'react-router-dom';
+import TimeLeft from '../Timer/TimeLeft'
 
 import {
   Collapse,
@@ -15,6 +16,7 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';  
+import Timer from '../Timer/timer';
 
 
 // import Timer from '../Timer/timer'
@@ -27,36 +29,39 @@ const Example = (props) => {
   return (
     <div>
             <Navbar color="light" light expand="md">
-        <NavbarBrand tag={Link} to="/">ProcrastiHaters</NavbarBrand>
+        <NavbarBrand href="/">ProcrastiHaters</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink tag={Link} to="/Quote">Quotes</NavLink>
+              <NavLink href="./pages/Quotes">Quotes</NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/useJournal">Journal</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+               Timer/Register
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
                 <NavLink tag={Link} to="/Login">Login</NavLink>  
                 </DropdownItem>
                 <DropdownItem>
+                 
                 <NavLink tag={Link} to="/Signup">SignUp</NavLink>
                 </DropdownItem>
-                {/* <DropdownItem divider />
+                 <DropdownItem divider />
                 <DropdownItem>
-                  Reset
-                </DropdownItem> */}
+                  <Timer />
+                </DropdownItem>
               </DropdownMenu>
+              
             </UncontrolledDropdown>
           </Nav>
           <NavbarText>Work Harder on Moving Forward</NavbarText>
         </Collapse>
+        
       </Navbar>
     </div>
   );
