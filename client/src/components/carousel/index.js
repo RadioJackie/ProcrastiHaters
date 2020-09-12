@@ -12,19 +12,19 @@ const items = [
     id: 1,
     src: "https://picsum.photos/2000/600",
       //  
-      caption: 'LIfe is Passing you by'
+      caption: 'Life Is Passing You by'
   },
   { 
     id: 2,
     src: "https://picsum.photos/2000/600",
     // altText: 'Slide 2',
-    caption: 'Stop Wasting Time doing Nothing'
+    caption: 'Stop Wasting Time Doing Nothing'
   },
   {
     id: 3,
     src: "https://picsum.photos/2000/601",
     altText: '',
-    caption: 'You are better than this!'
+    caption: 'You Are Better Than This!'
   }
 ];
 
@@ -60,7 +60,7 @@ const Example = (props) => {
       >
           {/* <img src="https://picsum.photos/200/300" alt={item.altText} /> */}
           <img src={item.src} alt={item.altText} />
-        <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} />
+        <CarouselCaption className= 'text-light ' captionHeader={item.caption}  />
       </CarouselItem>
     );
   });
@@ -73,7 +73,12 @@ const Example = (props) => {
               max-width: 100%;
               height: 250px;
               background: black;
-            }`
+            }
+            .text-light{
+              text-shadow: 1px 1px #000
+              
+            }
+            `
         }
       </style>
       <Carousel
