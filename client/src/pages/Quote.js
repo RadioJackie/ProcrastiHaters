@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 // import Quotes from './quotes.js'
 // import NextQuote from './nextQuote.js'
 import '../App.css';
@@ -16275,43 +16275,58 @@ const Data = [{
   
  
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      quoteNum: Math.floor(Math.random()*Data.length)
-    }
-  }
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       quoteNum: Math.floor(Math.random()*Data.length)
+//     }
+//   }
 
-  changeCallback = () => {
+//   changeCallback = () => {
 
-    let value = Math.floor(Math.random()*Data.length);
+//     let value = Math.floor(Math.random()*Data.length);
 
-    if (value === this.state.quoteNum) {
-      value = Math.floor(Math.random()*Data.length);
-    } else {
-      this.setState({
-        quoteNum: value
-      })
-    }
+//     if (value === this.state.quoteNum) {
+//       value = Math.floor(Math.random()*Data.length);
+//     } else {
+//       this.setState({
+//         quoteNum: value
+//       })
+//     }
     
-  }
+//   }
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1> Hello </h1>
-            <h6 className="QuoteID">#{Data[this.state.quoteNum].ID}</h6>
-        </header>
-        <main>
-          {/* <Quotes quote={Data[this.state.quoteNum].quote}/> */}
-          <nextQuotes changeCallback={this.changeCallback}/>
-        </main>
+//   render() {
+//     return (
+//       <div className="App">
+//         <header className="App-header">
+//           <h1> Hello </h1>
+//             <h6 className="QuoteID">#{Data[this.state.quoteNum].ID}</h6>
+//         </header>
+//         <main>
+//           {/* <Quotes quote={Data[this.state.quoteNum].quote}/> */}
+//           <nextQuotes changeCallback={this.changeCallback}/>
+//         </main>
         
-      </div>
-    );
+//       </div>
+//     );
+//   }
+// }
+function Quote() {
+  const [index, setIndex] = useState(null);
+
+  useEffect(() => {
+    const rand = Math.floor(Math.random() * Data.length);
+    setIndex(rand);
+  }, [])
+  if (index !== null) {
+    return (<>
+      <div style={{color: 'white'}}>{Data[index].quoteText}</div>
+      <div style={{color: 'white'}}>{Data[index].quoteAuthor}</div>
+      </>)
   }
+  return '';
 }
 
-export default Data
+export default Quote

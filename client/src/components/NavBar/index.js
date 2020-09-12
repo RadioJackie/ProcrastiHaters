@@ -27,12 +27,12 @@ const Example = (props) => {
   return (
     <div>
             <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">ProcrastiHaters</NavbarBrand>
+        <NavbarBrand tag={Link} to="/">ProcrastiHaters</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="./pages/quotes">Quotes</NavLink>
+              <NavLink tag={Link} to="/Quote">Quotes</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#">Journal</NavLink>
