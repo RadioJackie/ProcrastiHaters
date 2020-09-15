@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import Quote from "./pages/Quote";
 import Login from "./pages/Login"
 import SignUp from "./pages/Signup"
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 import Carousel from "./components/carousel";
 import NavBar from "./components/NavBar"
-import MyCalendar from "./components/Calendar"
+import Scheduler from "./Scheduler"
 import Journal from "./pages/Journal"
 // import Navbar from "./components/NavBar";
+import Timer from "./components/Timer/timer"
 
 
 
@@ -24,12 +25,15 @@ function App() {
     <Router>
       <Carousel />
       <NavBar />
-      <Nav />
+      <div id="container">
+      {/* <Nav /> */}
+      <Route exact path='/Scheduler' component={Scheduler}></Route>
       <Route exact path='/Quote' component={Quote}></Route>
       <Route exact path='/Login' component={Login}></Route>
       <Route exact path='/SignUp' component={SignUp}></Route>
       <Route exact path='/useJournal' component={Journal}></Route>
-     
+      <Route exact path='/Timer' component={Timer}></Route>
+     </div>
     </Router>
   );
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import 'dhtmlx-scheduler';
 import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css';
 
@@ -72,7 +72,7 @@ export default class Scheduler extends Component {
         const { timeFormatState } = this.props;
         this.setHoursScaleFormat(timeFormatState);
         return (
-            <div
+            <div className="container"
                 ref={ (input) => { this.schedulerContainer = input } }
                 style={ { width: '100%', height: '100%' } }
             ></div>

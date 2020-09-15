@@ -16,7 +16,7 @@ const items = [
   },
   { 
     id: 2,
-    src: "https://picsum.photos/2000/",
+    src: "https://picsum.photos/2000/599",
     // altText: 'Slide 2',
     caption: 'Stop Wasting Time Doing Nothing'
   },
@@ -28,7 +28,7 @@ const items = [
   }
 ];
 
-const Example = (props) => {
+const App = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -95,4 +95,4 @@ const Example = (props) => {
   );
 }
 
-export default Example;
+export default App;

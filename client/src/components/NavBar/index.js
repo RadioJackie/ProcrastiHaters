@@ -28,13 +28,17 @@ const Example = (props) => {
 
   return (
     <div>
-            <Navbar color="light" light expand="md">
+      {/* <Nav className="navbar navbar-expand-lg navbar-light bg-light"></Nav> */}
+        <Navbar color="light" light expand="md">
         <NavbarBrand href="/">ProcrastiHaters</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
+          <NavItem>
+              <NavLink tag={Link} to="/pages/Scheduler">Scheduler</NavLink>
+            </NavItem>
             <NavItem>
-              <NavLink href="./pages/Quotes">Quotes</NavLink>
+              <NavLink tag={Link} to="/pages/Quote">Quotes</NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/useJournal">Journal</NavLink>

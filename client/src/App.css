@@ -57,11 +57,11 @@ header >h1 {
        So if the container is 50% of viewport (as here)
        then factor that into how you want it to size.
        Let's say you like 5vw if it were the whole width,
-       then for this container, size it at 2.5vw (5 * .5 [i.e. 50%])
-    */
-    font-size: 34px;
+       then for this container, size it at 2.5vw (5 * .5 [i.e. 50%]) */
+   
+     font-size: 34px;
     font-weight: bold;
-}
+} 
 .caption > .au {
   font-family: 'Pacifico', cursive;
   text-transform: capitalize;
@@ -170,5 +170,5 @@ text-shadow:-.1em .15em .15em black;
     font-size: 1vw;
 }
 .rano{
-   padding: 20px 20px;
-}
+   padding: 20px 20px; 
+}  

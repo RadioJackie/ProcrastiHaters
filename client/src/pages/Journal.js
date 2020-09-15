@@ -1,4 +1,4 @@
-import React, {  } from "react";
+import React, {Component  } from "react";
 import moment from 'react-moment'
 import ReactDOM from 'react-dom'
 
