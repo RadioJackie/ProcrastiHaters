@@ -1,4 +1,10 @@
-.scheduler-container {
-    height: calc(100vh - 50px - 200px);
-    width: 100vw;
+/* .scheduler-container {
+    height:200px;
+    width: 100vw; */
+
+/* } */
+#scheduler_here{
+    width: 100%;
+    height: 100%;
+
 }

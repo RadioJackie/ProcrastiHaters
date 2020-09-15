@@ -16317,13 +16317,15 @@ const Data = [{
 // }
 function Quote() {
   const mystyle = {
-  // ? display: "block",
-  color: "white",
-  backgroundColor: "DodgerBlue",
-  padding: "10px",
-  fontFamily: "Arial"
-};
-
+    display: "flex",
+    color: "white",
+    backgroundColor: "MidnightBlue",
+    padding: "10px",
+    font: "45px",
+    fontFamily: "Arial",
+    justifyContent: "center",
+    alignItems: "center"
+  };
  
   const [index, setIndex] = useState(null);
 
@@ -16333,13 +16335,13 @@ function Quote() {
   }, [])
   if (index !== null) {
     return (<>
-      <div>{Data[index].quoteText}</div>
-      <div>{Data[index].quoteAuthor}</div>
-        </>)
+      <div style={mystyle}>{Data[index].quoteText}</div>
+      <div style={mystyle}>{Data[index].quoteAuthor}</div>
+      </>)
   }
   return '';
-};
+}
 
-ReactDOM.render(<Quote/>, document.getElementById('root'));
+// ReactDOM.render(<Quote/>, document.getElementById('root'));
 
-export default Data
+export default Quote;
