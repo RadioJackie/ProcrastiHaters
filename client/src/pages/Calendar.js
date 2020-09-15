@@ -48,7 +48,7 @@ class Calendar extends Component {
 		return (
 			<div>
 				<div className="tool-bar">
-					<h1>Hello World</h1>
+					<h1>Do Something with your Life</h1>
 					<Toolbar
 						timeFormatState={currentTimeFormatState}
 						onTimeFormatStateChange={this.handleTimeFormatStateChange}
