@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Break from './Break';
 import Session from './Session';
 import TimeLeft from './TimeLeft';
-import { Button, Row} from 'reactstrap';
+import { Button, Row }  from 'reactstrap';
 
 
 function Timer() {

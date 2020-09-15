@@ -1,8 +1,10 @@
 
 import React, {useState, useEffect} from 'react';
+import ReactDOM from 'react-dom';
 // import Quotes from './quotes.js'
 // import NextQuote from './nextQuote.js'
-import '../App.css';
+// import '../App.css';
+import App from './Journal';
 // import Data from "./Quotes.js"
 
 const Data = [{
@@ -16315,16 +16317,13 @@ const Data = [{
 // }
 function Quote() {
   const mystyle = {
-    display: "flex",
-    color: "white",
-    backgroundColor: "MidnightBlue",
-    padding: "10px",
-    font: "45px",
-    fontFamily: "Arial",
-    justifyContent: "center",
-    alignItems: "center"
-    
-  };
+  // ? display: "block",
+  color: "white",
+  backgroundColor: "DodgerBlue",
+  padding: "10px",
+  fontFamily: "Arial"
+};
+
  
   const [index, setIndex] = useState(null);
 
@@ -16334,11 +16333,13 @@ function Quote() {
   }, [])
   if (index !== null) {
     return (<>
-      <div style={mystyle}>{Data[index].quoteText}</div>
-      <div style={mystyle}>{Data[index].quoteAuthor}</div>
-      </>)
+      <div>{Data[index].quoteText}</div>
+      <div>{Data[index].quoteAuthor}</div>
+        </>)
   }
   return '';
-}
+};
 
-export default Quote
+ReactDOM.render(<Quote/>, document.getElementById('root'));
+
+export default Data
