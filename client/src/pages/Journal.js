@@ -97,7 +97,7 @@ function Entry({addEntry}) {
         ref={fieldRef}
         />
       </div>
-      <div class="form-check form-check-inline mb-3">
+      <div className="form-check form-check-inline mb-3">
         <input className="form-check-input" 
           id="flagDanger" type="radio" name="flag" 
           value="danger" defaultChecked={flag === 'danger'} 

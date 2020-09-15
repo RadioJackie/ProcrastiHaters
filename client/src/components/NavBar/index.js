@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import {Link} from 'react-router-dom';
-import TimeLeft from '../Timer/TimeLeft'
+// import TimeLeft from '../Timer/TimeLeft'
 
 import {
   Collapse,
@@ -35,10 +35,10 @@ const Example = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
           <NavItem>
-              <NavLink tag={Link} to="/pages/Scheduler">Scheduler</NavLink>
+              <NavLink tag={Link} to="/Scheduler">Scheduler</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/pages/Quote">Quotes</NavLink>
+              <NavLink tag={Link} to="/Quote">Quotes</NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/useJournal">Journal</NavLink>

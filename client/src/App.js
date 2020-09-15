@@ -6,9 +6,12 @@ import SignUp from "./pages/Signup"
 // import Nav from "./components/Nav";
 import Carousel from "./components/carousel";
 import NavBar from "./components/NavBar"
-import Scheduler from "./Scheduler"
+import Calendar from "./pages/Calendar"
+// import Toolbar from "./components/Toolbar";
+// import MessageArea from "./components/MessageArea"
+
 import Journal from "./pages/Journal"
-// import Navbar from "./components/NavBar";
+
 import Timer from "./components/Timer/timer"
 
 
@@ -27,7 +30,7 @@ function App() {
       <NavBar />
       <div id="container">
       {/* <Nav /> */}
-      <Route exact path='/Scheduler' component={Scheduler}></Route>
+      <Route exact path='/Scheduler' component={Calendar}></Route>
       <Route exact path='/Quote' component={Quote}></Route>
       <Route exact path='/Login' component={Login}></Route>
       <Route exact path='/SignUp' component={SignUp}></Route>

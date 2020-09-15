@@ -60,7 +60,7 @@ const App = (props) => {
       >
           {/* <img src="https://picsum.photos/200/300" alt={item.altText} /> */}
           <img src={item.src} alt={item.altText} />
-        <CarouselCaption className= 'text-light ' captionHeader={item.caption}  />
+        <CarouselCaption className= 'text-light ' captionHeader={item.caption} />
       </CarouselItem>
     );
   });

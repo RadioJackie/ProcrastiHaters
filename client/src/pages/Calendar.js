@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Scheduler from './components/Scheduler';
-import Toolbar from './components/Toolbar';
-import MessageArea from './components/MessageArea';
-import "../Scheduler/"
-import './App.css';
+// import ReactDOM from 'react-dom';
+import Scheduler from '../components/Scheduler';
+import Toolbar from '../components/Toolbar';
+import MessageArea from '../components/MessageArea';
+// import "../Scheduler/"
+
 
 const data = [
 	{ start_date: '2020-06-10 6:00', end_date: '2020-06-10 8:00', text: 'Event 1', id: 1 },
 	{ start_date: '2020-06-13 10:00', end_date: '2020-06-13 18:00', text: 'Event 2', id: 2 }
 ];
 
-class App extends Component {
+class Calendar extends Component {
 	state = {
 		currentTimeFormatState: true,
 		messages: []
@@ -48,12 +48,13 @@ class App extends Component {
 		return (
 			<div>
 				<div className="tool-bar">
+					<h1>Hello World</h1>
 					<Toolbar
 						timeFormatState={currentTimeFormatState}
 						onTimeFormatStateChange={this.handleTimeFormatStateChange}
 					/>
 				</div>
-				<div className='scheduler-container'>
+				<div className= "">
 					<Scheduler
 						events={data}
 						timeFormatState={currentTimeFormatState}
@@ -64,14 +65,13 @@ class App extends Component {
 					messages={messages}
 				/>
 			</div>
+			
 		);
 	}
 }
-ReactDOM.render(<Router> 
-    <App/>
-    </Router>, document.getElementById("root"));
 
-export default App;
+
+export default Calendar;
 
 
 
